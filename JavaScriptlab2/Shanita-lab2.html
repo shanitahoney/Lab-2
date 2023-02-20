@@ -5,45 +5,79 @@
     <title>Shanita's Used Cars</title>
   </head>
   <body>
-    <script>
+      <style>
+
+        body {
+          font-weight: bold;
+        }
+
+        .name {
+          width: 600px;
+        }
+
+        .province {
+          width: 608px;
+        }
+
+        .dob {
+          width: 604px;
+        }
+
+        label {
+          margin-top: 3em;
+        }
+
+        .emp {
+          width: 608px;
+        }
+
+        input, select {
+          margin-bottom: 1em;
+        }
+      </style>
+
+      <h1>Shanita's Used Cars: Employee List</h1>
+
       <form action="">
-  <label for="name">Name:</label>
-  <input type ="Text"></input>
-  <label for="province">Province:</label>
-  <label for="date of birth">DOB:</label>
-  <label for="favorite color">Fav color:</label>
+        <label for="name">Name:</label><br>
+        <input type ="Text" class="name"></input><br>
 
-    <div id="dropdown">
-      <label for="province">Province:</label>
-      <select id="province">
-        <option value="Alberta">Alberta</option>
-        <option value="British Columbia">British Columbia</option>
-        <option value="Manitoba">Manitoba</option>
-        <option value="New Brunswick">New Brunswick</option>
-        <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
-        <option value="Northwest Territories">Northwest Territories</option>
-        <option value="Nova Scotia">Nova Scotia</option>
-        <option value="Nunavut">Nunavut</option>
-        <option value="Ontario">Ontario</option>
-        <option value="Prince Edward Island">Prince Edward Island</option>
-        <option value="Quebec">Quebec</option>
-        <option value="Saskatchewan">Saskatchewan</option>
-        <option value="Yukon">Yukon</option>
-      </select>
-    
-      <label for="date of birth">DOB:</label>
-<input type="date" id="DOB" name="DOB"></input>
+        <!-- <label for="province">Province:</label><br>
+        <label for="date of birth">DOB:</label><br>
+        <label for="favorite color">Fav color:</label><br> -->
 
-    <label for="favorite color">fav color:</label>
-<input type="color" id="fav color" name="fav color"></input>
+        <div id="dropdown">
+          <label for="province">Province:</label><br>
 
-<button type="button">Add Employee</button>
-    
+          <select id="province" class="province">
+            <option value="selector">-- select the province --</option>
+            <option value="Alberta">Alberta</option>
+            <option value="British Columbia">British Columbia</option>
+            <option value="Manitoba">Manitoba</option>
+            <option value="New Brunswick">New Brunswick</option>
+            <option value="Newfoundland and Labrador">Newfoundland and Labrador</option>
+            <option value="Northwest Territories">Northwest Territories</option>
+            <option value="Nova Scotia">Nova Scotia</option>
+            <option value="Nunavut">Nunavut</option>
+            <option value="Ontario">Ontario</option>
+            <option value="Prince Edward Island">Prince Edward Island</option>
+            <option value="Quebec">Quebec</option>
+            <option value="Saskatchewan">Saskatchewan</option>
+            <option value="Yukon">Yukon</option>
+          </select><br>
 
+          <label for="date of birth">DOB:</label><br>
+          <input type="date" id="DOB" name="DOB" class="dob"></input><br>
 
-  
-    </div>
+          <label for="favorite color">fav color:</label><br>
+          <input type="color" id="fav color" name="fav color"></input><br>
+
+          <button type="button" class="emp">Add Employee</button>
+        </div>
   </form>
-    </script>
   </body>
+
+  <script>
+
+  </script>
 </html>
