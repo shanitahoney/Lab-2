@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>week 3</title>
+</head>
+<body>
+<script>
+    // var oldSchool = new Array();
+    // oldSchool.push('first_val');
+    //
+    // console.log(olsSchool.length);
+
+    // var car = new Obeject();
+
+    // car.color = 'Red';
+    // car.mileage = 50000;
+    // car.make = 'honda';
+    // car.model = 'Civic';
+
+    // car.getDetails = function () {
+    //     console.log(this.make + ' ' + this.model);
+    // }
+
+    // console.log(Car.make);
+    // car.getDetails();
+
+    // var car1 = {
+    //     model: 'honda',
+    //     make: 'civic',
+    //     year: 2016,
+    //     getDetails: function () {
+    //         return this.model + ' ' + this.make;
+    //     }
+    // };
+
+    // var car2 = {
+    //     model: 'Jeep',
+    //     make: 'Wrangler',
+    //     year: 2016,
+    //     getDetails: function () {
+    //         return this.model + ' ' + this.make;
+    //     }
+    // };
+
+    // var car3 = {
+    //     model: 'Toyota',
+    //     make: 'Corolla',
+    //     year: 2008,
+    //     getDetails: function () {
+    //         return this.model + ' ' + this.make;
+    //     }
+    // };
+
+    var car1 = new Car('honda', 'civic', 2016);
+    var car2 = new Car('Jeep', 'Wrangler', 2016);
+    var car3 = new Car('toyota', 'corollla', 2008);
+
+        /**
+         * This function changes the car's year
+         * 
+         * @param {Car} org_car
+
+         */
+        
+    function changeYear(arg_car) {
+        arg_car.year = 2022;
+    }
+
+    console.log(car1);
+    changeYear(car1);
+    console.log(car1);
+
+    car.getDetails();
+    console.log(typeof[]);
+
+
+

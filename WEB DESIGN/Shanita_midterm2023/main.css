@@ -1,0 +1,78 @@
+body{
+    background-color:#ff004c ;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+#wrap{
+    background-color: white ;
+    border-style: solid ;
+    margin: auto;
+    width: 90%;
+    float: left;
+}
+
+
+.qatar_skyline {
+    width: 100%;
+}
+
+section {
+    padding:3em 2em;
+    display: flex;
+    margin-left: 2%;
+}
+
+.content-right{
+    border-right: 1px solid #ff004c;
+    padding-right: 4em;
+}
+
+h1{
+    font-size: 45px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+h2{
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+p {
+    font-family: Georgia;
+}
+
+nav {
+    font-family:Arial;
+    line-height: 1.7rem;
+    font-size: 14px;
+}
+
+nav ul {
+    list-style-type: none;
+}
+
+nav a {
+    color:#ff004c;
+    text-decoration: none;
+    
+}
+
+aside 
+{
+    float: right;
+    width: 20%;
+    margin: 1%;
+    border-left: 2px solid #ff004c;
+    border-spacing: 2%;
+    padding: 1%;
+    font-size: 12px;
+
+}
+
+aside p img
+{
+    border: 2px solid #ff004c; 
+    margin-bottom: 10%;
+    width: 100%;
+}

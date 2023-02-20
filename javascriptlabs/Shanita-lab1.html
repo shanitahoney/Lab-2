@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shanita's Used Cars</title>
+  </head>
+  <body>
+    <script>
+
+      var production_year = prompt("What is the year of the vehicle??");
+      var campany_name = prompt("What is the make of the vehicle??");
+      var car_name = prompt("What is the model of the vehicle?");
+      var condition_score = prompt("What is the condition score of the vehicle on a scale of 1-5??");
+      var mileage_in_km = parseFloat(
+        prompt("What is the mileage of the vehicle in KM??")
+      );
+      var msrp = parseFloat(prompt("What is the MSRP of the vehicle??"));
+      var condition;
+     
+        if (condition_score === "1") {
+          condition = "Very Poor";
+        } else if (condition_score === "2") {
+          condition = "Poor";
+        } else if (condition_score === "3") {
+          condition = "Fair";
+        } else if (condition_score === "4") {
+          condition = "Good";
+        } else if (condition_score === "5") {
+          condition = "Excellent";
+        } else {
+          condition = "UNKNOWN";
+        }
+
+      var mileage_in_miles = mileage_in_km * 0.621371;
+      var taxes;
+      if (msrp <= 10000) {
+        taxes = msrp * 0.1;
+      } else {
+        taxes = msrp * 0.15;
+      }
+     var total_purchase_price = msrp + taxes;
+      var name = production_year + " " + campany_name + " " + car_name;
+      document.write(
+        "Vehicle Details: " +
+          name +
+          "<br>" +
+          "Condition: " +
+          condition +
+          "<br>" +
+          "Mileage(KM): " +
+          mileage_in_KM +
+          "<br>" +
+          "Mileage(MI): " +
+          mileage_in_miles +
+          "<br>" +
+          "MSRP: $" +
+          MSRP +
+          "<br>" +
+          "Total Purchase Price: $" +
+          total_purchase_price
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,67 @@
+body{
+  font-family: georgia, 'times new roman', serif;
+  background-image: url(../images/ruby_back.jpg);
+  background-size: auto;
+  float: left;
+  padding-left: 0rem;
+  background-repeat: repeat-y;
+  margin-right: 1%;
+  
+}
+h1{
+  font-weight: normal;
+  margin-left: 8%;
+  color: #58243a;
+
+}
+
+#lists{
+  margin-top: 3%;
+  margin-bottom: 2%;
+  list-style: none;
+  padding-left: 4%;
+  
+}
+
+#lists ul li{
+  display: inline;
+  padding-left: 1%;
+  padding-right: 4%;
+  font-size: larger;
+}
+
+a{
+  text-decoration: none;
+  color: #58243a;
+  font-weight: normal;
+  font-size: large;
+}
+#party_type{
+  padding-left: 10%;
+}
+
+p{
+  padding-left: 8%;
+}
+hr{
+  margin-left: 8%;
+  margin-right: 2%;    
+}
+
+img{
+  float: right;
+  margin-left: 2%;
+  margin-right: 2%;
+  margin-bottom: 1%;
+  border: 2px solid #555;
+  border-color: black;
+}
+
+text{
+  display: inline;
+  color: #58243a;
+}
+
+#content{
+  margin-right: 2%;
+}

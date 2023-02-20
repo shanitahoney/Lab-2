@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/underscore@1.13.6/underscore-umd-min.js"></script>
+    <script>
+        //create deck of cards
+        // var first_card = {
+        //     name: 'oxfordSaurus',
+        //     strength: 90,
+        //     attachDistance: 1000,
+        //     feeling: 80,
+        // };
+        // var second_name = {
+        //     name: 'dundasaurus',
+        //     strength: 40,
+        //     attachDistance: 100,
+        //     feeling:70,
+        // };
+        // var third_name = {
+        //     name: 'clarksaurus',
+        //     strength: 50,
+        //     attachDistance: 400,
+        //     feeling:70,
+        // };
+        // var fourth_name = {
+        //     name: 'huronsaurus',
+        //     strength: 50,
+        //     attachDistance: 900,
+        //     feeling:75,
+        // };
+
+        function card(c_name, strength, attachDistance, feelings)
+        {
+            this.name = c_name;
+            this.strength = strength;
+            this.attachDistance = attachDistance;
+            this.feelings = feelings;
+            this.getInfo = function(){
+                return 'your card is '+ this.name + ',' + 'strength ' + this.strength + ', attachDistance ' + this.attachDistance + ', feelings ' +this.feelings + '.' 
+            }
+        }
+       
+        var deck = [
+            new card('huronsaurus',50,900,70),
+            new card('dundassaurus',70,700,89),
+            new card('oxfordsaurus',80,600,40),
+            new card('clarksaurus',60,800,71),
+        ];
+        deck = _.shuffle(deck);
+        
+        
+        //distribute cards
+
+        var player = [];
+        var computer = [];
+
+        for(var i=0; i<deck.length; i++)
+        {
+            if(i /2 === 0){
+                player.push(deck[i]);
+            }
+            else{
+                computer.push(deck[i]);
+            }
+        }
+        //start the game
+        alert('welcome to the game!')
+
+        //both players will pull one card
+        var player_card = player.pop();
+        var computer_card = computer.pop();
+
+        //u gonna choose the power
+       var power = prompt(player_card.getInfo() + '\n what power you want to choose? strength, attachDistance, feelings')
+        
+        //compare the power
+    do{
+
+
+        if (player_card[power] > computer_card[power])
+        {
+            player.unshift(player_card);
+            player.unshift(computer_card);
+        }
+        else if(player_card[power] < computer_card[power])
+        {
+            computer.unshift(computer_card);
+            player.unshift(player_card);
+        }
+        else{
+            player.unshift(player_card);
+            player.unshift(computer_card);
+        }
+    }while(player.length >0 && computer.length > 0);
+
+    if (player.length === 0)
+    {
+        alert('computer wins');
+    }
+    else{
+        alert('player wins');
+    }
+        // if there is a tie, both players get to keep there card.
+        //whoever is stroger gonna win
+        // wnner gets to keep other player's card
+        // if both have card, we gonna continue
+        //if one of the players is empty, we gonna declare other player as winner
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
+
+
