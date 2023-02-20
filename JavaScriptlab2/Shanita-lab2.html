@@ -40,7 +40,7 @@
 
       <form action="">
         <label for="name">Name:</label><br>
-        <input type ="Text" class="name"></input><br>
+        <input type ="Text" class="name" id="name"></input><br>
 
         <!-- <label for="province">Province:</label><br>
         <label for="date of birth">DOB:</label><br>
@@ -78,6 +78,47 @@
   </body>
 
   <script>
+    function takevalue(){
+      var name = document.getElementById("name").value;
 
+      document.write(name);
+    }
   </script>
+</html>
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Form Example</title>
+    <style>
+      .list-item {
+        padding: 10px;
+        margin: 5px;
+        border-radius: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form Example</h1>
+    <form>
+      <label for="text">Text:</label>
+      <input type="text" id="text" name="text"><br>
+      <label for="color">Color:</label>
+      <input type="color" id="color" name="color"><br>
+      <input type="button" value="Submit" onclick="addNewListItem()">
+    </form>
+    <h2>List Items:</h2>
+    <ol id="list"></ol>
+    <script>
+      function addNewListItem() {
+        var textValue = document.getElementById("text").value;
+        var colorValue = document.getElementById("color").value.toUpperCase();
+        var list = document.getElementById("list");
+        var newListItem = document.createElement("li");
+        newListItem.textContent = textValue;
+        newListItem.style.color = colorValue;
+        list.appendChild(newListItem);
+      }
+    </script>
+  </body>
 </html>
